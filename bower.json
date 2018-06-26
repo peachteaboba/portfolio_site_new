@@ -1,0 +1,25 @@
+{
+  "name": "bitworth_v4",
+  "description": "New Hotness",
+  "main": "server.js",
+  "authors": [
+    "peachteaboba"
+  ],
+  "license": "MIT",
+  "homepage": "www.bitworth.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9"
+  },
+  "resolutions": {
+    "angular": "^1.6.9"
+  }
+}
