@@ -1,0 +1,19 @@
+{
+  "name": "portfolio_site_new",
+  "version": "0.0.1",
+  "description": "Andy's portfolio site",
+  "main": "server.js",
+  "author": "peachteaboba",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peachteaboba/portfolio_site_new"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "colors": "^1.1.2",
+    "express": "^4.16.3",
+    "moment": "^2.21.0",
+    "mongoose": "^5.0.17"
+  }
+}
