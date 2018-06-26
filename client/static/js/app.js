@@ -2,7 +2,7 @@
  * Created by anndyfeng1 on 2/24/16.
  */
 
-let eccy_app = angular.module('eccy_app', ['ngRoute', 'ngSanitize', 'ngclipboard', 'duScroll']);
+let eccy_app = angular.module('eccy_app', ['ngRoute', 'duScroll']);
 
 function easeInOutQuart(t) {
     return t<.5 ? 8*t*t*t*t : 1-8*(--t)*t*t*t
@@ -145,7 +145,7 @@ eccy_app.controller('mainController', function($scope, $document, $element, $win
     }
 
     var myanim = new Image();
-    myanim.src = 'static/img/bw/demo_v1.gif';
+    myanim.src = 'static/img/bw/holder.png';
     document.getElementById('gif').src = myanim.src;
 
 
