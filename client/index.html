@@ -34,8 +34,8 @@
     <link rel="shortcut icon" href="static/img/fav.png">
 
     <!-- javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script type="text/javascript" src="angular/angular.min.js"></script>
+    <script type="text/javascript" src="angular-route/angular-route.min.js"></script>
     <script src="static/js/angular-scroll.min.js"></script>
     <script src="static/js/app.js"></script>
 </head>
@@ -137,13 +137,23 @@
                 A designer and creative at heart with a deep appreciation for beautifully designed products and experiences.
             </p>
 
-            <div class="email-wrapper" ngclipboard data-clipboard-text="anndyfeng1@gmail.com" ng-click="email()"
-                 ng-class="{'green-bg': copied}">
+
+
+
+
+
+            <div class="email-wrapper" ng-click="email()" ng-class="{'green-bg': copied}">
                 <img class="email-icon" src="static/img/em.png">
                 <p ng-show="copied">Email copied to clipboard</p>
                 <p ng-hide="copied">anndyfeng1@gmail.com</p>
             </div>
             <div class="email-prompt"><h2>click to copy email to clipboard</h2></div>
+
+
+
+
+
+
 
 
         </div>

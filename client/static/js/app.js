@@ -14,66 +14,73 @@ eccy_app.value('duScrollEasing', easeInOutQuart);
 // UserFactory ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: UserFactory
 eccy_app.factory('MetricFactory', function($http) {
     let factory = {};
-    var metrics = [];
+    let metrics = [];
 
     factory.index = function(callback) {
-        $http.get('/allMetrics').success(function(output) {
+        $http.get('/allMetrics').then(function(output) {
             metrics = output;
             callback(metrics);
-        })
+        });
     };
+
     factory.indexInit = function(callback) {
-        $http.get('/initMetrics').success(function(output) {
-            metrics = output;
-            callback(metrics);
-        })
-    };
-    factory.incPage = function(callback) {
-        $http.get('/incPage').success(function(output) {
-            metrics = output;
-            callback(metrics);
-        })
-    };
-    factory.incShow = function(callback) {
-        $http.get('/incShow').success(function(output) {
-            metrics = output;
-            callback(metrics);
-        })
-    };
-    factory.incSub = function(callback) {
-        $http.get('/incSub').success(function(output) {
-            metrics = output;
-            callback(metrics);
-        })
-    };
-    factory.incHam = function(callback) {
-        $http.get('/incHam').success(function(output) {
-            metrics = output;
-            callback(metrics);
-        })
-    };
-    factory.incLI = function(callback) {
-        $http.get('/incLI').success(function(output) {
-            metrics = output;
-            callback(metrics);
-        })
-    };
-    factory.incGH = function(callback) {
-        $http.get('/incGH').success(function(output) {
-            metrics = output;
-            callback(metrics);
-        })
-    };
-    factory.incINST = function(callback) {
-        $http.get('/incINST').success(function(output) {
+        $http.get('/initMetrics').then(function(output) {
             metrics = output;
             callback(metrics);
         })
     };
 
+    factory.incPage = function(callback) {
+        $http.get('/incPage').then(function(output) {
+            metrics = output;
+            callback(metrics);
+        })
+    };
+
+    factory.incShow = function(callback) {
+        $http.get('/incShow').then(function(output) {
+            metrics = output;
+            callback(metrics);
+        })
+    };
+
+    factory.incSub = function(callback) {
+        $http.get('/incSub').then(function(output) {
+            metrics = output;
+            callback(metrics);
+        })
+    };
+
+    factory.incHam = function(callback) {
+        $http.get('/incHam').then(function(output) {
+            metrics = output;
+            callback(metrics);
+        })
+    };
+
+    factory.incLI = function(callback) {
+        $http.get('/incLI').then(function(output) {
+            metrics = output;
+            callback(metrics);
+        })
+    };
+
+    factory.incGH = function(callback) {
+        $http.get('/incGH').then(function(output) {
+            metrics = output;
+            callback(metrics);
+        })
+    };
+
+    factory.incINST = function(callback) {
+        $http.get('/incINST').then(function(output) {
+            metrics = output;
+            callback(metrics);
+        })
+    };
 
     factory.incEmail = function(callback) {
-        $http.get('/incEmail').success(function(output) {
+        $http.get('/incEmail').then(function(output) {
             metrics = output;
             callback(metrics);
         })
@@ -99,18 +106,49 @@ eccy_app.factory('MetricFactory', function($http) {
 
 
 
-
-
-
-
-
-
-
-
-// MainController ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: MainController
 eccy_app.controller('mainController', function($scope, $document, $element, $window, $timeout, $location, $anchorScroll, MetricFactory){
-    // console.log('hello this is the main controller');
 
+
+
+
+
+
+
+    // Handle email clicked, copy to clipboard
+    // ---------------------------------------
+    // ---------------------------------------
+    $scope.email = function () {
+        MetricFactory.incEmail(function (data) {
+            $scope.metrics = data;
+        });
+        Clipboard.copy("anndyfeng1@gmail.com", function (status) {
+            console.log("Successfully copied email wallet address to clipboard ( " + status + " )");
+            $scope.copied = 1;
+            $timeout(function () {
+                $scope.copied = 0;
+            }, 2500);
+        });
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // NEW HOTNESS ---------------------
+    // NEW HOTNESS ---------------------
+    // NEW HOTNESS ---------------------
+    // NEW HOTNESS ---------------------
+    // NEW HOTNESS ---------------------
 
 
 
@@ -228,19 +266,6 @@ eccy_app.controller('mainController', function($scope, $document, $element, $win
         });
         $window.open('//hamster.gold');
     };
-
-    $scope.email = function(){
-        MetricFactory.incEmail(function(data) {
-            $scope.metrics = data;
-        });
-        $scope.copied = 1;
-        $timeout(function() {
-            $scope.copied = 0;
-        }, 2500);
-    };
-
-
-
 
 
 
@@ -451,17 +476,7 @@ eccy_app.controller('mainController', function($scope, $document, $element, $win
 
 
 
-    $scope.email = function(){
-        MetricFactory.incEmail(function(data) {
-            $scope.metrics = data;
-        });
-        $scope.copied = 1;
-        $timeout(function() {
-            $scope.copied = 0;
-        }, 2500);
 
-
-    };
 
 
 
@@ -482,3 +497,110 @@ eccy_app.controller('mainController', function($scope, $document, $element, $win
     };
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NEW HOTNESS ---------------------
+// NEW HOTNESS ---------------------
+// NEW HOTNESS ---------------------
+// NEW HOTNESS ---------------------
+// NEW HOTNESS ---------------------
+
+window.Clipboard = (function(window, document, navigator) {
+    let textArea,
+        copy;
+
+    function isOS() {
+        // console.log(navigator.userAgent);
+        return navigator.userAgent.match(/ipad|ipod|iphone/i);
+    }
+
+    function createTextArea(text, cb) {
+        if (isOS()) {
+            textArea = document.createElement('textArea');
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            selectText(text, cb);
+        } else {
+            copyTextToClipboard(text, cb);
+        }
+    }
+
+    function selectText(text, cb) {
+        let range,
+            selection;
+        if (isOS()) {
+            range = document.createRange();
+            range.selectNodeContents(textArea);
+            selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            textArea.setSelectionRange(0, 999999);
+
+            // Perform action to copy to clipboard
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            cb("iOS");
+        }
+    }
+
+
+    copy = function(text, cb) {
+        createTextArea(text, cb);
+    };
+
+    function copyTextToClipboard(text, cb) {
+        if (!navigator['clipboard']) {
+            fallbackCopyTextToClipboard(text, cb);
+            return;
+        }
+        navigator['clipboard']['writeText'](text).then(function() {
+            console.log('Async: Copying to clipboard was successful! ---> ' + text);
+            cb("web");
+        }, function(err) {
+            console.error('Async: Could not copy text: ', err);
+            cb("web");
+        });
+    }
+
+    function fallbackCopyTextToClipboard(text, cb) {
+        let textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            let successful = document.execCommand('copy');
+            let msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+            cb("web");
+            document.body.removeChild(textArea);
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+            cb("web");
+            document.body.removeChild(textArea);
+        }
+    }
+
+    return {
+        copy: copy
+    };
+})(window, document, navigator);
