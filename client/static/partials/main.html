@@ -177,79 +177,77 @@
                 <div class="triangleL-web-skills1"></div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!--------------------------------------->
+        <!--------------------------------------->
+        <!---------------- WORDD ---------------->
+        <!--------------------------------------->
+        <!--------------------------------------->
         <div class="ios-project-wrapper" id="wordd">
-            <!--<div class="ios-intro">iOS</div>-->
+            <!----------------->
+            <!-- Phone Image -->
+            <!----------------->
             <img class="phone1-img" src="static/img/phone1.png" ng-class="{'phone1-img-ani': aniWordd}">
-
-
+            <!------------------->
+            <!-- Logo App Icon -->
+            <!------------------->
             <img class="wordd-img" src="static/img/wordd.png" ng-class="{'wordd-img-ani': aniWordd}">
+            <!----------->
+            <!-- Title -->
+            <!----------->
             <div class="app-title-text" ng-class="{'app-title-text-ani': aniWordd}">
                 <h1>Wordd.</h1>
                 <h2>Dictionary</h2>
             </div>
-
-
+            <!------------------>
+            <!-- Text Block 1 -->
+            <!------------------>
             <div class="app-text-1" ng-class="{'app-text-1-ani': aniWordd}">
                 <p>noun</p>
                 <h1>definition:</h1>
                 <h2>The easiest way to look up words on the go.</h2>
-
                 <h1>example:</h1>
                 <h3>Go download the Wordd App right now!</h3>
             </div>
-
+            <!------------------>
+            <!-- Text Block 2 -->
+            <!------------------>
             <div class="app-text-2" ng-class="{'app-text-2-ani': aniWordd}">
-                <p>tagline</p>
-
-                <h1>example:</h1>
-                <h3>We have the best words!</h3>
+                <p>urban dictionary</p>
+                <h1>explained:</h1>
+                <h3>The two D's are for a "double-dose of pimpin".</h3>
             </div>
-
-            <div class="download-btn">
-                <a href="https://itunes.apple.com/us/app/id1147289887" target="_blank"><img class="app-store-img"
-                                                                                            src="static/img/app-store.svg"></a>
+            <!-------------->
+            <!-- DOWNLOAD -->
+            <!-------------->
+            <div class="download-body-wrapper-wordd" ng-class="{'app-text-3-ani': aniWordd}">
+                <div class="download-img-wrapper-wordd">
+                    <img class="img-download-wordd" src="static/img/bitworth/download_dark.png" alt="" ng-click="appStoreWordd()">
+                </div>
             </div>
-        </div> <!--end ios-project-->
-
-
+        </div>
+        <!-------------------->
+        <!-- Triangle Cover -->
+        <!-------------------->
         <div class="ios-web-transition">
             <div class="triangle-ios-web"></div>
             <div class="triangleL-ios-web"></div>
         </div>
-
-
+        <!---------------------------------------------->
+        <!---------------------------------------------->
+        <!---------------- WEB PROJECTS ---------------->
+        <!---------------------------------------------->
+        <!---------------------------------------------->
         <div class="web-project-wrapper">
             <div class="web-intro">Web Projects</div>
-
-
             <div class="subman-wrapper"
                  ng-mouseenter="hvrSM = true"
                  ng-mouseleave="hvrSM = false"
                  ng-class="{'hoverSM': hvrSM}" ng-click="sub()">
-
                 <div class="hg-title" ng-hide="hvrSM">subman.io</div>
                 <div class="sm-inner-wrapper">
-
                     <img class="sm-logo-grey" src="static/img/sm-stencil-w.png"
                          ng-class="{'sm-logo-grey-hvr': hvrSM}">
                     <img class="sm-logo-color" src="static/img/sm-c.png" ng-class="{'sm-logo-color-hvr': hvrSM}">
-
                     <div class="subman-hover-wrapper" ng-class="{'subman-hover-wrapper-hvr': hvrSM}">
                         <h1>SUBMAN</h1>
                         <h2>Subscription Management Dashboard</h2>
@@ -257,36 +255,26 @@
                             your fixed monthly payments.</h3>
                     </div>
                 </div>
-
                 <div class="link-stats-wrapper" ng-show="hvrSM">
                     <img class="eye-icon" src="static/img/eye.png">
                     <h1 ng-bind="metrics.sub"></h1>
                 </div>
             </div>
-
-
             <div class="divider2" ng-class="{'div2-static': init == 0, 'div-ani2': init == 1}"></div>
-
-
             <div class="hg-wrapper"
                  ng-mouseenter="hvrHG = true"
                  ng-mouseleave="hvrHG = false" ng-class="{'hoverHG': hvrHG}" ng-click="ham()">
-
                 <div class="hg-title" ng-hide="hvrHG">hamster.gold</div>
                 <div class="hg-inner-wrapper">
-
                     <img class="hg-logo-grey" src="static/img/hg-stencil-w.png"
                          ng-class="{'hg-logo-grey-hvr': hvrHG}">
                     <img class="hg-logo-color" src="static/img/hg-c.png" ng-class="{'hg-logo-color-hvr': hvrHG}">
-
                     <div class="hamster-hover-wrapper" ng-class="{'hamster-hover-wrapper-hvr': hvrHG}">
                         <h1>hamster.</h1>
                         <h2>Multiplayer Browser Adventure</h2>
                         <h3>Hamster.gold is a Pacman based PVP browser game built using MEAN stack technologies and
                             Socket.io</h3>
                     </div>
-
-
                 </div>
                 <div class="link-stats-wrapper" ng-show="hvrHG">
                     <img class="eye-icon" src="static/img/eye.png">
@@ -294,9 +282,8 @@
                 </div>
             </div>
         </div>
-    </div> <!--end projects-wrapper-main-->
-</div> <!--end top-wrapper-->
-
+    </div>
+</div>
 
 <div class="web-projects-to-skills-wrapper-transition"></div>
 <div class="web-skills-transition ">
@@ -304,17 +291,29 @@
     <div class="triangleL-web-skills"></div>
 </div>
 
-
 <div class="skills-wrapper" id="skill">
     <div class="skills-intro-text">SKILLS</div>
-
-
     <div class="skill-category-wrapper">
         <div class="skill-category-title">
             <img class="skill-cat-icon" src="static/img/skill/client.png">
             <h1>client</h1>
         </div>
-
+        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
+            <img class="skill-icon" src="static/img/skill/swift.png">
+            <h1>Swift</h1>
+        </div>
+        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
+            <img class="skill-icon" src="static/img/skill/js.png">
+            <h1>Javascript</h1>
+        </div>
+        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
+            <img class="skill-icon" src="static/img/skill/angular.png">
+            <h1>Angular</h1>
+        </div>
+        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
+            <img class="skill-icon" src="static/img/skill/jq.png">
+            <h1>jQuery</h1>
+        </div>
         <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
             <img class="skill-icon" src="static/img/skill/html.png">
             <h1>HTML5</h1>
@@ -323,42 +322,15 @@
             <img class="skill-icon" src="static/img/skill/css.png">
             <h1>CSS3</h1>
         </div>
-        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
-            <img class="skill-icon" src="static/img/skill/js.png">
-            <h1>Javascript</h1>
-        </div>
-        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
-            <img class="skill-icon" src="static/img/skill/jq.png">
-            <h1>jQuery</h1>
-        </div>
-        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
-            <img class="skill-icon" src="static/img/skill/angular.png">
-            <h1>Angular</h1>
-        </div>
-        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
-            <img class="skill-icon" src="static/img/skill/swift.png">
-            <h1>Swift</h1>
-        </div>
-
     </div>
     <div class="skill-category-wrapper">
         <div class="skill-category-title">
             <img class="skill-cat-icon" src="static/img/skill/server.png">
             <h1>server</h1>
         </div>
-
-        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
-            <img class="skill-icon" src="static/img/skill/php.png">
-            <h1>PHP</h1>
-        </div>
-        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
-            <img class="skill-icon" src="static/img/skill/ror.png">
-            <h1>RoR</h1>
-        </div>
-
         <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
             <img class="skill-icon" src="static/img/skill/node.png">
-            <h1>Node.js</h1>
+            <h1>Node</h1>
         </div>
         <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
             <img class="skill-icon" src="static/img/skill/expressjs.png">
@@ -372,14 +344,20 @@
             <img class="skill-icon" src="static/img/skill/nginx.png">
             <h1>NGINX</h1>
         </div>
-
+        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
+            <img class="skill-icon" src="static/img/skill/php.png">
+            <h1>PHP</h1>
+        </div>
+        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
+            <img class="skill-icon" src="static/img/skill/ror.png">
+            <h1>RoR</h1>
+        </div>
     </div>
     <div class="skill-category-wrapper">
         <div class="skill-category-title">
             <img class="skill-cat-icon" src="static/img/skill/db.png">
             <h1>database</h1>
         </div>
-
         <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani3': aniSkill}">
             <img class="skill-icon" src="static/img/skill/mongo.png">
             <h1>MongoDB</h1>
@@ -390,7 +368,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="education-wrapper" id="edu" ng-class='{ "active": offsetY > 300 }'>
     <div class="education-intro-text" ng-click="animateEdu()">Education</div>
@@ -406,9 +383,7 @@
                 <h3>Cupertino</h3>
             </div>
         </div>
-
         <div class="edu-line1"></div>
-
         <div class="edu-bubble-wrapper edu-mid">
             <div class="edu-bubble-bg usc-bubble"></div>
             <img class="usc-icon" src="static/img/edu/usc.png">
@@ -458,12 +433,24 @@
 <div class="exp-wrapper">
     <div class="exp-intro-text">PROFESSIONAL EXPERIENCE</div>
     <div class="exp-bubble">
-        <h1>Liquid Animals</h1>
-        <h2>Software Engineer</h2>
-        <h3>Building out the core product utilizing various web technologies and frameworks</h3>
+        <h1>Bitworth</h1>
+        <h2>Founder, Full Stack Developer</h2>
+        <h3>Did everything on this project. Literally. Front-end, back-end, database,<br>
+            dev-ops, graphic design, UI/UX, customer support, marketing, social media, <br>
+            server maintenance, coffee runs... everything</h3>
         <div class="exp-date">
             <h4>Burbank, CA</h4>
-            <h4>Jun 2017 - Present</h4>
+            <h4>May 2017 - Present</h4>
+        </div>
+    </div>
+    <div class="exp-bubble">
+        <h1>Liquid Animals</h1>
+        <h2>Software Engineer</h2>
+        <h3>BMember of the core engineering team building SaaS product in the space of <br>
+            workflow automation. Core technologies used: RoR, JS, PostgreSQL</h3>
+        <div class="exp-date">
+            <h4>Burbank, CA</h4>
+            <h4>Jun 2017 - Jan 2018</h4>
         </div>
     </div>
     <div class="exp-bubble">
@@ -477,10 +464,12 @@
     </div>
     <div class="exp-bubble">
         <h1>HANHAI STUDIO</h1>
-        <h2>Community Development Associate / Website Admin</h2>
-        <h3>Designed and maintained a responsive website for a startup whose mission is to act as a bridge between
+        <h2>Community Development Associate / Web Developer</h2>
+        <h3>Designed and maintained a responsive website for a startup whose mission is to<br>
+            act as a bridge between
             US-Chinese creative and technology companies</h3>
-        <h3>Optimized multi-channel marketing strategies including deployment of creative marketing collateral and
+        <h3>Optimized multi-channel marketing strategies including deployment of creative<br>
+            marketing collateral and
             social media technology to promote community outreach programs </h3>
         <div class="exp-date">
             <h4>Burbank, CA</h4>
@@ -490,12 +479,11 @@
     <div class="exp-bubble">
         <h1>Nomquest</h1>
         <h2>Co-founder</h2>
-        <h3>Utilized programming expertise to build a mobile first, restaurant discovery app that gamifies the
+        <h3>Utilized programming expertise to build a mobile first, restaurant discovery <br>
+            app that gamifies the
             process of trying new places to eat and rewards users for going to different restaurants</h3>
         <h3>Analyzed the behavior of target users to effectively design a user-friendly interface</h3>
         <h3>Prepared detailed requirement documents to assist in the outsourcing of new features development</h3>
-
-
         <div class="exp-date">
             <h4>Los Angeles, CA</h4>
             <h4>2013 - 2015</h4>
@@ -505,30 +493,13 @@
 
 </div>
 
-
 <div class="footer-wrapper">
-
-    <div class="footer-left">
-
-        <h1>© 2017 AF1</h1>
-
-
-    </div>
-
     <div class="footer-right">
-
-
         <div class="contact">
-            <img class="contact-icon" src="static/img/contact.png">
-            <img class="line-icon" src="static/img/line.png">
             <h2 class="ct-2">Burbank, CA</h2>
-            <h2 class="ct-3">(408) 826-2736</h2>
-            <h2 class="ct-4">anndyfeng1@gmail.com</h2>
+            <h2 class="ct-3">anndyfeng1@gmail.com</h2>
+            <h2 class="ct-4">© 2018 Andy Feng</h2>
         </div>
-
-
     </div>
-
-
 </div>
 

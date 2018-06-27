@@ -28,6 +28,12 @@ app.controller('mainController', ["$scope", '$document', "$window", "$location",
     // ------------
     $scope.init = 1;
     $scope.copied = 0;
+    $scope.aniSkill = 0;
+    $scope.aniEdu = 0;
+    $scope.aniWordd = 0;
+    $scope.subHover = 0;
+    $scope.hamHover = 0;
+
 
     // Vertical Scroll
     // ---------------
@@ -41,11 +47,9 @@ app.controller('mainController', ["$scope", '$document', "$window", "$location",
     // ---------------------
     function fetchSiteMetrics() {
         MetricFactory.index(function (data) {
-            if (data.data && data.data.length > 0) {
-                $scope.metrics = data.data[0];
-                // console.log($scope.metrics);
-                goToTop();
-            }
+            $scope.metrics = data;
+            console.log(data);
+            goToTop();
         });
     }
     fetchSiteMetrics();
@@ -63,9 +67,6 @@ app.controller('mainController', ["$scope", '$document', "$window", "$location",
             $scope.init = 0;
         }, 1500);
     }
-
-
-
 
     // Handle header links clicked
     // ---------------------------
@@ -125,13 +126,17 @@ app.controller('mainController', ["$scope", '$document', "$window", "$location",
     // -------------------------------------
     $scope.appStore = function () {
         $window.open('https://appsto.re/us/cI02jb.i');
+        MetricFactory.incBitworth(function (data) {
+            $scope.metrics = data;
+        });
     };
 
     $scope.bitworthSite = function () {
         $window.open('https://bitworth.app');
+        MetricFactory.incBitworth(function (data) {
+            $scope.metrics = data;
+        });
     };
-
-
 
     // .......... Rotate bitworth screenshots ..........
     // .................................................
@@ -182,259 +187,189 @@ app.controller('mainController', ["$scope", '$document', "$window", "$location",
     // .................................................
 
 
+    // ...............................................
+    // ...............................................
+    // ...............................................
+    // ...............................................
+    // .............                     .............
+    // .............    Wordd Specific   .............
+    // .............                     .............
+    // ...............................................
+    // ...............................................
+    // ...............................................
+    // ...............................................
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-    // NEW HOTNESS ---------------------
-
-
-    $scope.aniSkill = 0;
-    $scope.aniEdu = 0;
-    $scope.aniWordd = 0;
-
-
-
-
-    $scope.goToSomewhere = function (w) {
-        var top;
-        var duration = 500; //milliseconds
-        if (w == 'top') {
-
-            top = 750;
-            //Scroll to the exact position
-            $document.scrollTop(top, duration).then(function () {
-                // console && console.log('You just scrolled to the bottom!');
-            });
-
-
-            $scope.where = 'bottom';
-        }
-        if (w == 'bottom') {
-
-            top = 0;
-            //Scroll to the exact position
-            $document.scrollTop(top, duration).then(function () {
-                // console && console.log('You just scrolled to the top!');
-            });
-
-            $scope.where = 'top';
-        }
+    // Handle Wordd related links clicked
+    // ----------------------------------
+    // ----------------------------------
+    $scope.appStoreWordd = function () {
+        $window.open('https://itunes.apple.com/us/app/wordd/id1147289887?mt=8');
+        MetricFactory.incWordd(function (data) {
+            $scope.metrics = data;
+        });
     };
 
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // .............                         .............
+    // .............  Web Projects Specific  .............
+    // .............                         .............
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // ...................................................
 
+    // Handle Web related links clicked
+    // --------------------------------
+    // --------------------------------
     $scope.sub = function () {
+        $window.open('//subman.io');
         MetricFactory.incSub(function (data) {
             $scope.metrics = data;
         });
-        $window.open('//subman.io');
     };
 
     $scope.ham = function () {
+        $window.open('//hamster.gold');
         MetricFactory.incHam(function (data) {
             $scope.metrics = data;
         });
-        $window.open('//hamster.gold');
+    };
+
+    // Hover animations for web section
+    // --------------------------------
+    // --------------------------------
+    $scope.subHoverE = function () {
+        $scope.subHover = 1;
+    };
+
+    $scope.subHoverL = function () {
+        $scope.subHover = 0;
+    };
+
+    $scope.hamHoverE = function () {
+        $scope.hamHover = 1;
+    };
+
+    $scope.hamHoverL = function () {
+        $scope.hamHover = 0;
     };
 
 
-    // Vertical distance from the top of the page to the top of the edu-wrapper div
-    var eduDivTop = angular.element(document.querySelector('#edu')).prop('offsetTop');
-    var skillDivTop = angular.element(document.querySelector('#skill')).prop('offsetTop');
-    var worddDivTop = angular.element(document.querySelector('#wordd')).prop('offsetTop');
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // .............                         .............
+    // .............    Education Specific   .............
+    // .............                         .............
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // ...................................................
 
-    // Initialize variable to hold animation trigger point
-    var eduTrigger;
-    var skillTrigger;
-    var worddTrigger;
-
-    // Change scope variable on scroll -------------------------------------
-    $timeout(function () {
-
-        angular.element($window).on('scroll', function () {
-
-            $scope.offsetY = this.pageYOffset;
-
-            if (this.pageYOffset >= 25) {
-                $scope.where = 'bottom';
-                // console.log('Scrolled below header.');
-            } else {
-                $scope.where = 'top';
-                // console.log('Header is in view.');
-            }
-
-
-            // Animate wordd section ------------------------------------
-            worddTrigger = worddDivTop - ($window.innerHeight / 2);
-            if (this.pageYOffset >= worddTrigger) {
-                if ($scope.aniWordd != 1) {
-                    $scope.aniWordd = 1;
-                }
-            } // ------------------------------ end Animate Wordd Section
-
-
-            // Animate skill section ------------------------------------
-            skillTrigger = skillDivTop - ($window.innerHeight / 3);
-            if (this.pageYOffset >= skillTrigger) {
-                if ($scope.aniSkill != 1) {
-                    $scope.aniSkill = 1;
-                    // console.log('skill');
-                }
-            } // ------------------------------ end Animate Skill Section
-
-
-            // Animate edu section --------------------------------------
-            eduTrigger = eduDivTop - ($window.innerHeight / 2);
-            // Animate education section
-            if (this.pageYOffset >= eduTrigger) {
-                if ($scope.aniEdu != 1) {
-                    $scope.aniEdu = 1;
-                }
-            } // -------------------------------- end Animate Edu Section
-
-
-            $scope.$apply();
-        });
-
-
-    }, 500);
-    // ---------------------------------------------------------------------
-
-
+    // Force re-animate edu bar when clicked
+    // -------------------------------------
+    // -------------------------------------
     $scope.animateEdu = function () {
         $scope.aniEdu = 1;
         $timeout(function () {
             $scope.aniEdu = 0;
         }, 1000);
-
     };
 
 
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // .............                         .............
+    // .............     Scroll Animations   .............
+    // .............                         .............
+    // ...................................................
+    // ...................................................
+    // ...................................................
+    // ...................................................
 
+    $timeout(function () {
 
-    // $scope.gotoBottom = function() {
-    //     // set the location.hash to the id of
-    //     // the element you wish to scroll to.
-    //     $location.hash('bottom');
-    //
-    //     // call $anchorScroll()
-    //     $anchorScroll();
-    // };
+        // Vertical distance from the top of the page to the top of the edu-wrapper div
+        // ----------------------------------------------------------------------------
+        // ----------------------------------------------------------------------------
+        let worddDivTop = angular.element(document.getElementById("wordd")).prop('offsetTop');
+        let skillDivTop = angular.element(document.getElementById("skill")).prop('offsetTop');
+        let eduDivTop = angular.element(document.getElementById("edu")).prop('offsetTop');
 
+        // Initialize variable to hold animation trigger point
+        // ---------------------------------------------------
+        // ---------------------------------------------------
+        let eduTrigger;
+        let skillTrigger;
+        let worddTrigger;
+        
+        angular.element($window).on('scroll', function () {
 
-    // Initialize scope variables --------------------------------------------
-    $scope.showSum = 0;
-    $scope.copied = 0;
-    $scope.subHover = 0;
-    $scope.hamHover = 0;
+            // Record vertical offset
+            // ----------------------
+            // ----------------------
+            $scope.offsetY = this.pageYOffset;
 
+            // Toggle header bar styles
+            // ------------------------
+            // ------------------------
+            if (this.pageYOffset >= 25) {
+                // Scrolled below header
+                $scope.where = 'bottom';
+            } else {
+                // Header is in view
+                $scope.where = 'top';
+            }
 
-    $scope.showSumToggle = function () {
+            // Animate wordd section
+            // ---------------------
+            // ---------------------
+            worddTrigger = worddDivTop - ($window.innerHeight / 2);
+            if (this.pageYOffset >= worddTrigger) {
+                if ($scope.aniWordd !== 1) {
+                    $scope.aniWordd = 1;
+                }
+            }
 
+            // Animate skills section
+            // ----------------------
+            // ----------------------
+            skillTrigger = skillDivTop - ($window.innerHeight / 3);
+            if (this.pageYOffset >= skillTrigger) {
+                if ($scope.aniSkill !== 1) {
+                    $scope.aniSkill = 1;
+                }
+            }
 
-        if ($scope.showSum == 0) {
-            $scope.showSum = 1;
-            MetricFactory.incShow(function (data) {
-                $scope.metrics = data;
-            });
+            // Animate edu section
+            // -------------------
+            // -------------------
+            eduTrigger = eduDivTop - ($window.innerHeight / 2);
+            if (this.pageYOffset >= eduTrigger) {
+                if ($scope.aniEdu !== 1) {
+                    $scope.aniEdu = 1;
+                }
+            }
 
+            $scope.$apply();
+        });
 
-        } else {
-            $scope.showSum = 0;
-        }
+    }, 500);
 
-    };
-
-
-    $scope.subHoverE = function () {
-        $scope.subHover = 1;
-    };
-    $scope.subHoverL = function () {
-        $scope.subHover = 0;
-    };
-    $scope.hamHoverE = function () {
-        $scope.hamHover = 1;
-    };
-    $scope.hamHoverL = function () {
-        $scope.hamHover = 0;
-    };
 
 }]);
-
-
-// NEW HOTNESS ---------------------
-// NEW HOTNESS ---------------------
-// NEW HOTNESS ---------------------
-// NEW HOTNESS ---------------------
-// NEW HOTNESS ---------------------
 
 window.Clipboard = (function (window, document, navigator) {
     let textArea,
         copy;
 
     function isOS() {
-        // console.log(navigator.userAgent);
         return navigator.userAgent.match(/ipad|ipod|iphone/i);
     }
 
@@ -468,7 +403,6 @@ window.Clipboard = (function (window, document, navigator) {
         }
     }
 
-
     copy = function (text, cb) {
         createTextArea(text, cb);
     };
@@ -479,10 +413,8 @@ window.Clipboard = (function (window, document, navigator) {
             return;
         }
         navigator['clipboard']['writeText'](text).then(function () {
-            // console.log('Async: Copying to clipboard was successful! ---> ' + text);
             cb("web");
-        }, function (err) {
-            // console.error('Async: Could not copy text: ', err);
+        }, function () {
             cb("web");
         });
     }
@@ -494,19 +426,17 @@ window.Clipboard = (function (window, document, navigator) {
         textArea.focus();
         textArea.select();
         try {
-            let successful = document.execCommand('copy');
-            let msg = successful ? 'successful' : 'unsuccessful';
-            // console.log('Fallback: Copying text command was ' + msg);
-            cb("web");
+            document.execCommand('copy');
             document.body.removeChild(textArea);
+            cb("web");
         } catch (err) {
-            // console.error('Fallback: Oops, unable to copy', err);
-            cb("web");
             document.body.removeChild(textArea);
+            cb("web");
         }
     }
 
     return {
         copy: copy
     };
+
 })(window, document, navigator);
