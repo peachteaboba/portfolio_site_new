@@ -10,7 +10,7 @@ function easeInOutQuart(t) {
 app.value('duScrollEasing', easeInOutQuart);
 
 // Configure Angular Routes
-app.config(["$routeProvider", function ($routeProvider) {
+app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 
     // Define routes
     $routeProvider
@@ -21,4 +21,9 @@ app.config(["$routeProvider", function ($routeProvider) {
         .otherwise({
             redirectTo: '/'
         });
+
+    // Get rid of the '/#!/' in url
+    $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('');
+
 }]);
