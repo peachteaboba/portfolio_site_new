@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e5d32ce-cadc-42f5-9aa3-4f74d55f16e8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/andyfeng.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/static/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/static/js/factories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/static/partials/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/andyfeng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/andyfeng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/static/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/static/css/bw.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/static/css/bw.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/static/js/controllers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,14 +24,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47295544">
+    <splitter split-orientation="horizontal" split-proportion="0.44892144">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+                <state relative-caret-position="510">
+                  <caret line="34" selection-start-line="34" selection-end-line="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/static/partials/main.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="680">
+                  <caret line="172" column="126" selection-start-line="172" selection-start-column="126" selection-end-line="172" selection-end-column="144" />
                 </state>
               </provider>
             </entry>
@@ -35,23 +48,95 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/static/js/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="346">
-                  <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="horizontal" split-proportion="0.77371895">
+          <split-first>
+            <splitter split-orientation="horizontal" split-proportion="0.63741136">
+              <split-first>
+                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+                  <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/client/static/js/controllers.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="983">
+                          <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-first>
+              <split-second>
+                <leaf>
+                  <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/static/js/config.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="345">
+                          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/static/css/index.css">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="425">
+                          <caret line="702" selection-start-line="702" selection-end-line="711" selection-end-column="1" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="bw.css" pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/client/static/css/bw.css">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="925">
+                          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-second>
+            </splitter>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="factories.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/client/static/js/factories.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="1056">
+                      <caret line="81" column="3" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>$scope.email</find>
+      <find>$scope.metrics</find>
+      <find>ng-view</find>
+      <find>metrics[0]</find>
+      <find>$scope.where</find>
+      <find>$scope.goToTop</find>
+      <find>init</find>
+      <find>offset</find>
+      <find>in-wrapper</find>
+      <find>profile-img</find>
+      <find>projects-title</find>
+      <find>portfolio</find>
+      <find>img-links</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -60,8 +145,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/static/js/app.js" />
+        <option value="$PROJECT_DIR$/client/static/partials/home.html" />
+        <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/client/static/js/config.js" />
+        <option value="$PROJECT_DIR$/client/static/js/factories.js" />
+        <option value="$PROJECT_DIR$/client/static/css/index.css" />
+        <option value="$PROJECT_DIR$/client/static/partials/main.html" />
+        <option value="$PROJECT_DIR$/client/static/css/bw.css" />
+        <option value="$PROJECT_DIR$/client/static/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -93,10 +185,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2597" />
-    <option name="y" value="444" />
-    <option name="width" value="2477" />
-    <option name="height" value="1139" />
+    <option name="x" value="71" />
+    <option name="y" value="53" />
+    <option name="width" value="2457" />
+    <option name="height" value="1279" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -130,6 +222,30 @@
               <item name="portfolio_site_new" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="portfolio_site_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio_site_new" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio_site_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio_site_new" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio_site_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio_site_new" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio_site_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio_site_new" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -137,13 +253,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.11.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -168,21 +285,22 @@
       <option name="presentableId" value="Default" />
       <updated>1530060521505</updated>
       <workItem from="1530060524028" duration="910000" />
-      <workItem from="1530061466591" duration="677000" />
+      <workItem from="1530061466591" duration="11113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1587000" />
+    <option name="totallyTimeSpent" value="12023000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2597" y="444" width="2477" height="1139" extended-state="0" />
+    <frame x="71" y="53" width="2457" height="1279" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10052483" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32983795" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -195,7 +313,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,24 +329,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/static/js/app.js">
+    <entry file="file://$PROJECT_DIR$/client/static/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
           <caret line="138" selection-start-line="138" selection-end-line="138" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
+    <entry file="file://$PROJECT_DIR$/client/static/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="345">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/static/js/app.js">
+    <entry file="file://$PROJECT_DIR$/bower_components/angular-route/angular-route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="382">
+          <caret line="450" column="18" selection-start-line="450" selection-start-column="18" selection-end-line="450" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/static/js/factories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="81" column="3" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/metric.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/static/partials/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="172" column="126" selection-start-line="172" selection-start-column="126" selection-end-line="172" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="702" selection-start-line="702" selection-end-line="711" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/static/css/bw.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/static/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="983">
+          <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
         </state>
       </provider>
     </entry>
