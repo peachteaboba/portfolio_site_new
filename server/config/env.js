@@ -4,7 +4,7 @@
 
 module.exports = (function() {
     return {
-        production_server: true,
+        production_server: false,
 
         production_db: true,
 
