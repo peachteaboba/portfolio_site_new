@@ -1,12 +1,12 @@
-{
-  "name": "bitworth_v4",
+git {
+  "name": "portfolio_site_new",
   "description": "New Hotness",
   "main": "server.js",
   "authors": [
     "peachteaboba"
   ],
   "license": "MIT",
-  "homepage": "www.bitworth.io",
+  "homepage": "andyfeng.dev",
   "private": true,
   "ignore": [
     "**/.*",
