@@ -1,4 +1,4 @@
-git {
+{
   "name": "portfolio_site_new",
   "description": "New Hotness",
   "main": "server.js",
