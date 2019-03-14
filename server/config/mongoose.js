@@ -9,7 +9,7 @@ let fs = require('fs');
 let models_path = __dirname + '/../models';
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/portfolio_site_new").then(function () {
+mongoose.connect("mongodb://localhost/portfolio_site_new", { useNewUrlParser: true }).then(function () {
     console.log("[ mongoose ] Successfully connected to mongoose ( localhost )".green);
 });
 

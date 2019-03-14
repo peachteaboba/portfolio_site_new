@@ -5,6 +5,7 @@
 // ---------------------------------------------------------------
 // ------------------------------------------------------- Require
 // ---------------------------------------------------------------
+require('dotenv-safe').config();
 let express = require('express');
 let port = process.env.PORT || 9000;
 let path = require('path');
@@ -14,7 +15,6 @@ require('colors');
 // ---------------------------------------------------------------
 // --------------------------------------------------------- HTTPS
 // ---------------------------------------------------------------
-const env = require('./server/config/env');
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
@@ -23,10 +23,12 @@ let options = {};
 // ---------------------------------------------------------------
 // ----------------------------------------------------------- DEV
 // ---------------------------------------------------------------
-if (env.production_server) {
+if (process.env.PROD_SV === "1") {
+    // Use production certs
     options = {
-        cert: fs.readFileSync('./sslcert/fullchain.pem'),
-        key: fs.readFileSync('./sslcert/privkey.pem')
+        cert: fs.readFileSync("/etc/letsencrypt/live/andyfeng.dev/fullchain.pem"),
+        key: fs.readFileSync("/etc/letsencrypt/live/andyfeng.dev/privkey.pem"),
+        ca: fs.readFileSync("/etc/letsencrypt/live/andyfeng.dev/chain.pem")
     };
 }
 
@@ -54,7 +56,7 @@ require('./server/config/routes')(app);
 // -------------------------------------------------------- Listen
 // ---------------------------------------------------------------
 let server;
-if (env.production_server) {
+if (process.env.PROD_SV === "1") {
     server = https.createServer(options, app).listen(port, function () {
         console.log("-----------------------------------------------------------".blue);
         console.log("------------ It's over port: 9000!!! ( https ) ------------".blue);
