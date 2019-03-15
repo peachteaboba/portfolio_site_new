@@ -209,6 +209,13 @@ app.controller('mainController', ["$scope", '$document', "$window", "$location",
         });
     };
 
+    $scope.worddSite = function () {
+        $window.open('https://www.wordymcwordface.com/');
+        MetricFactory.incWordd(function (data) {
+            $scope.metrics = data;
+        });
+    };
+
     // ...................................................
     // ...................................................
     // ...................................................
@@ -308,7 +315,7 @@ app.controller('mainController', ["$scope", '$document', "$window", "$location",
         let eduTrigger;
         let skillTrigger;
         let worddTrigger;
-        
+
         angular.element($window).on('scroll', function () {
 
             // Record vertical offset

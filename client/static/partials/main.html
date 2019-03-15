@@ -190,7 +190,7 @@
             <!------------------->
             <!-- Logo App Icon -->
             <!------------------->
-            <img class="wordd-img" src="static/img/wordd.png" ng-class="{'wordd-img-ani': aniWordd}">
+            <img class="wordd-img" src="static/img/wordd.png" ng-class="{'wordd-img-ani': aniWordd}" ng-click="worddSite()">
             <!----------->
             <!-- Title -->
             <!----------->
@@ -284,13 +284,11 @@
         </div>
     </div>
 </div>
-
 <div class="web-projects-to-skills-wrapper-transition"></div>
 <div class="web-skills-transition ">
     <div class="triangle-web-skills"></div>
     <div class="triangleL-web-skills"></div>
 </div>
-
 <div class="skills-wrapper" id="skill">
     <div class="skills-intro-text">SKILLS</div>
     <div class="skill-category-wrapper">
@@ -309,6 +307,10 @@
         <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
             <img class="skill-icon" src="static/img/skill/angular.png">
             <h1>Angular</h1>
+        </div>
+        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
+            <img class="skill-icon" src="static/img/skill/react.png">
+            <h1>React</h1>
         </div>
         <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani': aniSkill}">
             <img class="skill-icon" src="static/img/skill/jq.png">
@@ -345,10 +347,6 @@
             <h1>NGINX</h1>
         </div>
         <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
-            <img class="skill-icon" src="static/img/skill/php.png">
-            <h1>PHP</h1>
-        </div>
-        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani2': aniSkill}">
             <img class="skill-icon" src="static/img/skill/ror.png">
             <h1>RoR</h1>
         </div>
@@ -366,9 +364,12 @@
             <img class="skill-icon" src="static/img/skill/sql.png">
             <h1>MySQL</h1>
         </div>
+        <div class="skill-bubble-wrapper" ng-class="{'skill-bubble-wrapper-ani3': aniSkill}">
+            <img class="skill-icon" src="static/img/skill/pgsql.png">
+            <h1>PostgreSQL</h1>
+        </div>
     </div>
 </div>
-
 <div class="education-wrapper" id="edu" ng-class='{ "active": offsetY > 300 }'>
     <div class="education-intro-text" ng-click="animateEdu()">Education</div>
     <div class="edu-timeline-wrapper">
@@ -396,9 +397,7 @@
                 <h3>Los Angeles</h3>
             </div>
         </div>
-
         <div class="edu-line2"></div>
-
         <div class="edu-bubble-wrapper edu-right">
             <div class="edu-bubble-bg"></div>
             <img class="coding-dojo-icon" src="static/img/edu/cd.png">
@@ -413,7 +412,6 @@
                 <h3>Burbank</h3>
             </div>
         </div>
-
         <!--ANIMATION-->
         <div class="animation-wrapper">
             <div class="animation-dot dot-1" ng-class="{'dot-1-ani': aniEdu}"></div>
@@ -424,8 +422,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="edu-exp-transition ">
     <div class="triangle-edu-exp"></div>
     <div class="triangleL-edu-exp"></div>
@@ -433,11 +429,18 @@
 <div class="exp-wrapper">
     <div class="exp-intro-text">PROFESSIONAL EXPERIENCE</div>
     <div class="exp-bubble">
+        <h1>Upsellit Technologies</h1>
+        <h2>Software Developer</h2>
+        <h3>Mainly uses Javascript to build solutions to help e-commerce companies sell more stuff</h3>
+        <div class="exp-date">
+            <h4>Aguora Hills, CA</h4>
+            <h4>Aug 2018 - Present</h4>
+        </div>
+    </div>
+    <div class="exp-bubble">
         <h1>Bitworth</h1>
         <h2>Founder, Full Stack Developer</h2>
-        <h3>Did everything on this project. Literally. Front-end, back-end, database,<br>
-            dev-ops, graphic design, UI/UX, customer support, marketing, social media, <br>
-            server maintenance, coffee runs... everything</h3>
+        <h3>Did everything on this project. All the coding, design, devops and customer support</h3>
         <div class="exp-date">
             <h4>Burbank, CA</h4>
             <h4>May 2017 - Present</h4>
@@ -446,7 +449,7 @@
     <div class="exp-bubble">
         <h1>Liquid Animals</h1>
         <h2>Software Engineer</h2>
-        <h3>BMember of the core engineering team building SaaS product in the space of <br>
+        <h3>Member of the core engineering team building SaaS product in the space of <br>
             workflow automation. Core technologies used: RoR, JS, PostgreSQL</h3>
         <div class="exp-date">
             <h4>Burbank, CA</h4>
@@ -462,37 +465,7 @@
             <h4>Sep 2016 - Jun 2017</h4>
         </div>
     </div>
-    <div class="exp-bubble">
-        <h1>HANHAI STUDIO</h1>
-        <h2>Community Development Associate / Web Developer</h2>
-        <h3>Designed and maintained a responsive website for a startup whose mission is to<br>
-            act as a bridge between
-            US-Chinese creative and technology companies</h3>
-        <h3>Optimized multi-channel marketing strategies including deployment of creative<br>
-            marketing collateral and
-            social media technology to promote community outreach programs </h3>
-        <div class="exp-date">
-            <h4>Burbank, CA</h4>
-            <h4>2015</h4>
-        </div>
-    </div>
-    <div class="exp-bubble">
-        <h1>Nomquest</h1>
-        <h2>Co-founder</h2>
-        <h3>Utilized programming expertise to build a mobile first, restaurant discovery <br>
-            app that gamifies the
-            process of trying new places to eat and rewards users for going to different restaurants</h3>
-        <h3>Analyzed the behavior of target users to effectively design a user-friendly interface</h3>
-        <h3>Prepared detailed requirement documents to assist in the outsourcing of new features development</h3>
-        <div class="exp-date">
-            <h4>Los Angeles, CA</h4>
-            <h4>2013 - 2015</h4>
-        </div>
-
-    </div>
-
 </div>
-
 <div class="footer-wrapper">
     <div class="footer-right">
         <div class="contact">
@@ -502,4 +475,3 @@
         </div>
     </div>
 </div>
-

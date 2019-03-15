@@ -434,7 +434,6 @@ html {
     opacity: 1;
 }
 
-
 /*********************************/
 /*********************************/
 /********* INTRO WRAPPER *********/
@@ -690,6 +689,19 @@ html {
     position: absolute;
     top: 15px;
     left: calc(50% - 320px);
+    border-radius: 22px;
+
+    -moz-transition: box-shadow 0.25s, -moz-transform ease-in-out 0.25s;
+    -webkit-transition: box-shadow 0.25s, -moz-transform ease-in-out 0.25s;
+    -o-transition: box-shadow 0.25s, -moz-transform ease-in-out 0.25s;
+    transition: box-shadow 0.25s, -moz-transform ease-in-out 0.25s;
+}
+
+.wordd-img:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 47px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 47px -8px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 47px -8px rgba(0,0,0,0.75);
 }
 
 .wordd-img-ani {
